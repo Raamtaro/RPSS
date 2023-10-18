@@ -5,22 +5,25 @@
 
 
 function getComputerChoice() {
-    const rpsNumber = Math.floor(Math.random() * 3) + 1;
-    let selection = "";
-    if (rpsNumber === 1) {
-        selection = "rock";
-    } 
-    else if (rpsNumber === 2) {
-        selection = "paper";
-    }
-    else if (rpsNumber === 3) {
-        selection = "scissors";
-    } 
-    else {
-        console.log("Your code is fucked up");
-    }
+    // const rpsNumber = Math.floor(Math.random() * 3) + 1;
+    // let selection = "";
+    // if (rpsNumber === 1) {
+    //     selection = "rock";
+    // } 
+    // else if (rpsNumber === 2) {
+    //     selection = "paper";
+    // }
+    // else if (rpsNumber === 3) {
+    //     selection = "scissors";
+    // } 
+    // else {
+    //     console.log("Your code is fucked up");
+    // }
 
-    return selection;
+    // return selection;
+    const weapon = ["rock", "paper", "scissors"];
+    return weapon[Math.floor(Math.random() * 3)];
+
 }
 
 const playerSelection = "rock";
@@ -63,5 +66,18 @@ function playRound(playerSelection, computerSelection) {
         console.log("check your code");
     }
 }
+
+
+// function game() {
+//     let playerScore = 0;
+//     let computerScore = 0;
+//     for (i=0; i < 5; i++) {
+//         const playerWin = playRound(); 
+//         if (playerWin) playerScore++
+//         else if (!playerWin) computerScore++
+//         else continue
+//     }
+// }
+
 
 console.log(playRound(playerSelection, computerSelection));

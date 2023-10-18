@@ -12,6 +12,32 @@ then I need a function which compares my choice against the computer and returns
 
 Lastly, game() will call playRound() 5 times (maybe via a loop or something) and will declare a winner based on the best of 5!
 
+game() needs:
+ - A way to keep score
+ - declare a winner at the end
+
+ might need to adjust playRound() to:
+
+- return a boolean based on who won the round - playerWin or computerWin? 
+
+- from here, we wrap back to game() and implement some logic using the true or false result
+
+
+let's give it a rough go, assuming that we've made the adjustment(s) to playRound()
+
+:::>>
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (i=0; i < 5; i++) {
+        const playerWin = playRound(); //This will be a result of either true or false
+        if (playerWin) playerScore++
+        else if (!playerWin) computerScore++
+        else continue
+    }
+}
+
 
 
 
@@ -39,7 +65,7 @@ getComputerChoice() ----> This should return "rock", "paper", or "scissors"
     }
 
 
-    return computerSelection
+    return Selection
 
 let computerSelection = getComputerChoice()
 
