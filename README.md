@@ -20,19 +20,19 @@ Pseudo:
 getComputerChoice() ----> This should return "rock", "paper", or "scissors"
 
     generate random number, translate it between 1 and 3, maybe via... 
-    rpsNumber = Math.floor(Math.random() * 3) + 1;
+    const rpsNumber = Math.floor(Math.random() * 3) + 1;
 
 
     take that random number, and set up some logic to choose rock, paper or scissor. maybe via...
 
     if (rpsNumber === 1) {
-        let computerSelection = "rock";
+        let selection = "rock";
     }
     else if (rpsNumber === 2) {
-        let computerSelection = "paper";
+        let selection = "paper";
     }
     else if (rpsNumber === 3) {
-        let computerSelection = "scissors";
+        let selection = "scissors";
     }
     else {
         console.log("check your rpsNumber logic");
